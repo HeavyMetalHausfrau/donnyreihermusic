@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet>
+<style>
+@font-face{font-family:Arsenal;font-style:normal;font-weight:400;src:url('assets/fonts/arsenal-regular.woff2') format('woff2');font-display:swap;}
+@font-face{font-family:Arsenal;font-style:normal;font-weight:700;src:url('assets/fonts/arsenal-bold.woff2') format('woff2');font-display:swap;}
+@font-face{font-family:Archivo;font-style:normal;font-weight:100 900;src:url('assets/fonts/archivo_wght.woff2') format('woff2');font-display:swap;}
+@font-face{font-family:"IBM Plex Sans";font-style:normal;font-weight:400;src:url('assets/fonts/ibm-plex-sans-regular.woff2') format('woff2');font-display:swap;}
+@font-face{font-family:"IBM Plex Sans";font-style:normal;font-weight:500;src:url('assets/fonts/ibm-plex-sans-medium.woff2') format('woff2');font-display:swap;}
+@font-face{font-family:"IBM Plex Sans";font-style:normal;font-weight:700;src:url('assets/fonts/ibm-plex-sans-bold.woff2') format('woff2');font-display:swap;}
+@font-face{font-family:"Space Mono";font-style:normal;font-weight:400;src:url('assets/fonts/space-mono-regular.woff2') format('woff2');font-display:swap;}
+@font-face{font-family:"Space Mono";font-style:normal;font-weight:700;src:url('assets/fonts/space-mono-bold.woff2') format('woff2');font-display:swap;}
+body{margin:0;background:#0b0b0a;}
+@keyframes drm-marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+@media (max-width:900px){
+  .drm-hero-head{font-size:56px !important;}
+  .drm-bio-grid{grid-template-columns:1fr !important;}
+  .drm-services-row{flex-wrap:wrap !important;}
+  .drm-nav{display:none !important;}
+}
+</style>
+</helmet>
+
+<div style="background:#0b0b0a;color:#f2ede4;font-family:'IBM Plex Sans',sans-serif;min-height:100vh;overflow-x:hidden">
+
+  <header style="display:flex;align-items:center;justify-content:space-between;padding:22px 48px;border-bottom:1px solid #2a2a28;position:relative;z-index:5">
+    <a href="Donny%20Reiher%20Music.dc.html" style="display:flex;align-items:center;gap:14px;text-decoration:none;color:inherit">
+      <img src="assets/drm-logo.png" alt="DRM crest" style="height:46px;width:auto;filter:invert(1) brightness(1.6)"/>
+      <span style="font-family:Arsenal,serif;font-weight:700;font-size:20px;letter-spacing:0.06em;text-transform:uppercase">Donny Reiher</span>
+    </a>
+    <nav class="drm-nav" style="display:flex;gap:32px;font-family:'Space Mono',monospace;font-size:13px;letter-spacing:0.08em;text-transform:uppercase">
+      <a href="About.dc.html" style="color:#f2ede4;text-decoration:none">About</a>
+      <a href="Services.dc.html" style="color:#f2ede4;text-decoration:none">Services</a>
+      <a href="Terms.dc.html" style="color:#f2ede4;text-decoration:none">Terms</a>
+      <a href="Specs.dc.html" style="color:#f2ede4;text-decoration:none">Specs</a>
+      <a href="Contact.dc.html" style="color:#f2ede4;text-decoration:none">Contact</a>
+    </nav>
+  </header>
+
+  <section style="position:relative;min-height:92vh;display:flex;align-items:flex-end;background:#000">
+    <img src="assets/hero-drums.jpg" alt="Donny Reiher drumming live under blue stage light" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;opacity:0.55"/>
+    <div style="position:absolute;inset:0;background:linear-gradient(0deg,#0b0b0a 8%,rgba(11,11,10,0.35) 55%,rgba(11,11,10,0.65) 100%)"></div>
+    <div style="position:relative;padding:0 48px 72px;max-width:1100px">
+      <div style="display:inline-block;transform:rotate(-3deg);border:3px solid #c81d2d;color:#c81d2d;font-family:'Space Mono',monospace;font-size:13px;letter-spacing:0.15em;text-transform:uppercase;padding:5px 14px;margin-bottom:22px">Booking now &mdash; any genre, any city</div>
+      <h1 class="drm-hero-head" style="font-family:Arsenal,serif;font-weight:700;font-size:104px;line-height:0.98;margin:0 0 22px;text-transform:uppercase;text-wrap:pretty">For all your<br/>angry drumming<br/>needs.</h1>
+      <p style="font-family:'Space Mono',monospace;font-size:16px;letter-spacing:0.04em;color:#cfc9bd;max-width:560px;margin:0 0 30px">You can call me Donny. Feel free to abuse my endless drive for this awesome instrument &mdash; live, in the studio, on tour, or behind the scenes.</p>
+      <a href="Contact.dc.html" style="display:inline-block;background:#c81d2d;color:#0b0b0a;font-family:'Space Mono',monospace;font-weight:700;font-size:14px;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;padding:16px 30px;clip-path:polygon(0 0,100% 0,100% 70%,96% 100%,4% 100%,0 70%)">Book Donny &rarr;</a>
+    </div>
+  </section>
+
+  <sc-if value="{{ showMarquee }}" hint-placeholder-val="{{ true }}">
+  <div style="background:#c81d2d;overflow:hidden;border-top:2px solid #0b0b0a;border-bottom:2px solid #0b0b0a">
+    <div style="display:flex;white-space:nowrap;animation:drm-marquee {{ marqueeSpeed }}s linear infinite;width:max-content">
+      <span style="font-family:Arsenal,serif;font-weight:700;font-size:26px;text-transform:uppercase;letter-spacing:0.04em;color:#0b0b0a;padding:14px 24px">METAL &nbsp;&bull;&nbsp; METALCORE &nbsp;&bull;&nbsp; DEATHCORE &nbsp;&bull;&nbsp; PROG &nbsp;&bull;&nbsp; DEATH METAL &nbsp;&bull;&nbsp; WEIRD-GENRE DISCOUNTS AVAILABLE &nbsp;&bull;&nbsp;</span>
+      <span aria-hidden="true" style="font-family:Arsenal,serif;font-weight:700;font-size:26px;text-transform:uppercase;letter-spacing:0.04em;color:#0b0b0a;padding:14px 24px">METAL &nbsp;&bull;&nbsp; METALCORE &nbsp;&bull;&nbsp; DEATHCORE &nbsp;&bull;&nbsp; PROG &nbsp;&bull;&nbsp; DEATH METAL &nbsp;&bull;&nbsp; WEIRD-GENRE DISCOUNTS AVAILABLE &nbsp;&bull;&nbsp;</span>
+    </div>
+  </div>
+  </sc-if>
+
+  <section id="bio" class="drm-bio-grid" style="display:grid;grid-template-columns:0.85fr 1.15fr;gap:64px;padding:110px 48px;max-width:1300px;margin:0 auto;align-items:center">
+    <div style="position:relative">
+      <img src="assets/portrait.jpg" alt="Donny Reiher portrait behind the kit" style="width:100%;display:block;filter:grayscale(1) contrast(1.1);clip-path:polygon(0 0,100% 3%,97% 100%,3% 97%)"/>
+      <div style="position:absolute;bottom:-18px;right:-18px;background:#c81d2d;color:#0b0b0a;font-family:'Space Mono',monospace;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:0.08em;padding:10px 16px;transform:rotate(-4deg)">Specializes in metal</div>
+    </div>
+    <div>
+      <div style="font-family:'Space Mono',monospace;font-size:13px;letter-spacing:0.15em;text-transform:uppercase;color:#c81d2d;margin-bottom:14px">01 / Who's behind the kit</div>
+      <h2 style="font-family:Arsenal,serif;font-weight:700;font-size:44px;line-height:1.05;margin:0 0 24px;text-transform:uppercase">Feel free to abuse<br/>my endless drive.</h2>
+      <p style="font-size:18px;line-height:1.65;color:#e7e1d5;margin:0 0 20px">If you're looking for solid drums <strong style="color:#fff">live</strong>, in the <strong style="color:#fff">studio</strong>, on <strong style="color:#fff">tour</strong>, or interested in (online) drum <strong style="color:#fff">lessons</strong>, help <strong style="color:#fff">writing</strong> (midi) drum parts, or full <strong style="color:#fff">midi-packages</strong> &mdash; I'm your guy.</p>
+      <p style="font-size:18px;line-height:1.65;color:#e7e1d5;margin:0">I specialize in metal, but will perform literally any genre. I always want to learn more &mdash; so check out the weird-genre-discounts.</p>
+    </div>
+  </section>
+
+  <section id="services" style="padding:0 48px 130px;max-width:1300px;margin:0 auto">
+    <div style="font-family:'Space Mono',monospace;font-size:13px;letter-spacing:0.15em;text-transform:uppercase;color:#c81d2d;margin-bottom:14px">02 / What I do</div>
+    <h2 style="font-family:Arsenal,serif;font-weight:700;font-size:44px;line-height:1.05;margin:0 0 48px;text-transform:uppercase">Services on tap</h2>
+    <div class="drm-services-row" style="display:flex;flex-wrap:wrap;gap:2px;background:#2a2a28">
+      <sc-for list="{{ services }}" as="svc" hint-placeholder-count="5">
+        <div style="flex:1;min-width:180px;background:#141412;padding:28px 22px;display:flex;flex-direction:column;gap:16px">
+          <span style="font-family:Archivo,sans-serif;font-weight:800;font-size:40px;color:#c81d2d">{{ svc.n }}</span>
+          <span style="font-family:Arsenal,serif;font-weight:700;font-size:20px;text-transform:uppercase">{{ svc.title }}</span>
+          <span style="font-size:14px;line-height:1.5;color:#a8a196">{{ svc.desc }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="lineup" style="background:#141412;padding:110px 48px;border-top:1px solid #2a2a28;border-bottom:1px solid #2a2a28">
+    <div style="max-width:1100px;margin:0 auto">
+      <div style="font-family:'Space Mono',monospace;font-size:13px;letter-spacing:0.15em;text-transform:uppercase;color:#c81d2d;margin-bottom:14px">03 / On the road with</div>
+      <h2 style="font-family:Arsenal,serif;font-weight:700;font-size:44px;line-height:1.05;margin:0 0 40px;text-transform:uppercase">Currently slamming for</h2>
+      <div style="display:flex;flex-wrap:wrap;gap:16px 48px;margin-bottom:56px">
+        <a href="https://open.spotify.com/artist/4KXXP4WTgnzQQQgv77cagF" style="font-family:Arsenal,serif;font-weight:700;font-size:32px;color:#f2ede4;text-decoration:none;border-bottom:3px solid #c81d2d">Canyon Literature</a>
+        <a href="https://open.spotify.com/artist/497D31qNuomZa2eCIOuEa5" style="font-family:Arsenal,serif;font-weight:700;font-size:32px;color:#f2ede4;text-decoration:none;border-bottom:3px solid #c81d2d">Deeproot</a>
+        <a href="https://open.spotify.com/artist/3afSBHNHr3tdalNzVKlB5Y" style="font-family:Arsenal,serif;font-weight:700;font-size:32px;color:#f2ede4;text-decoration:none;border-bottom:3px solid #c81d2d">A Part of the Problem</a>
+      </div>
+      <div style="font-family:'Space Mono',monospace;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:#a8a196;margin-bottom:16px">Proudly working / worked with</div>
+      <p style="font-family:'IBM Plex Sans',sans-serif;font-size:17px;line-height:2;color:#cfc9bd;margin:0">Changing Tides &nbsp;/&nbsp; Reformist &nbsp;/&nbsp; Tenuem &nbsp;/&nbsp; Obscure Reality &nbsp;/&nbsp; El Chupacabra &nbsp;/&nbsp; Seven Spirits Burning &nbsp;/&nbsp; Conquer All &nbsp;/&nbsp; Demoralizer &nbsp;/&nbsp; Plainscape &nbsp;/&nbsp; Ceremony of Opposites &nbsp;/&nbsp; Ozzy's minions</p>
+    </div>
+  </section>
+
+  <section id="gear" style="padding:110px 48px;max-width:1300px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:60px;flex-wrap:wrap">
+    <div style="max-width:520px">
+      <div style="font-family:'Space Mono',monospace;font-size:13px;letter-spacing:0.15em;text-transform:uppercase;color:#c81d2d;margin-bottom:14px">04 / On the pedalboard</div>
+      <h2 style="font-family:Arsenal,serif;font-weight:700;font-size:36px;line-height:1.15;margin:0 0 20px;text-transform:uppercase">Happily and proudly using Czarcie Kopyto Custom Drum Pedals</h2>
+      <a href="https://www.czarciekopyto.com/artist/donny-reiher/" style="font-family:'Space Mono',monospace;font-size:14px;color:#c81d2d;text-decoration:underline">See the full setup &amp; specs &rarr;</a>
+    </div>
+    <div style="background:#f2ede4;padding:36px 44px;transform:rotate(-2deg)">
+      <img src="assets/czarcie-logo.png" alt="Czarcie Kopyto Custom Drum Pedals logo" style="width:220px;display:block"/>
+    </div>
+  </section>
+
+  <section id="contact" style="background:#c81d2d;padding:120px 48px;text-align:center">
+    <div style="max-width:760px;margin:0 auto">
+      <h2 style="font-family:Arsenal,serif;font-weight:700;font-size:56px;line-height:1;margin:0 0 22px;text-transform:uppercase;color:#0b0b0a">Get in touch</h2>
+      <p style="font-family:'Space Mono',monospace;font-size:16px;letter-spacing:0.03em;color:#3a0d0d;margin:0 0 36px">Live &nbsp;&bull;&nbsp; Studio &nbsp;&bull;&nbsp; Tour &nbsp;&bull;&nbsp; Lessons &nbsp;&bull;&nbsp; Writing &nbsp;&bull;&nbsp; Weird genres always welcome</p>
+      <a href="Contact.dc.html" style="display:inline-block;background:#0b0b0a;color:#f2ede4;font-family:'Space Mono',monospace;font-weight:700;font-size:14px;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;padding:18px 34px">Send a message &rarr;</a>
+    </div>
+  </section>
+
+  <footer style="padding:56px 48px 40px;display:flex;flex-direction:column;gap:28px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px">
+      <div style="display:flex;align-items:center;gap:14px">
+        <img src="assets/drm-logo.png" alt="DRM crest" style="height:34px;width:auto;filter:invert(1) brightness(1.6)"/>
+        <span style="font-family:Arsenal,serif;font-weight:700;font-size:16px;letter-spacing:0.06em;text-transform:uppercase">Donny Reiher Music</span>
+      </div>
+      <div style="display:flex;gap:26px">
+        <a href="https://www.instagram.com/heavymetalhausfrau/" style="color:#a8a196;text-decoration:none;font-family:'Space Mono',monospace;font-size:13px;text-transform:uppercase">Instagram</a>
+        <a href="https://www.youtube.com/@heavymetalhausfrau" style="color:#a8a196;text-decoration:none;font-family:'Space Mono',monospace;font-size:13px;text-transform:uppercase">YouTube</a>
+        <a href="https://open.spotify.com/artist/4KXXP4WTgnzQQQgv77cagF" style="color:#a8a196;text-decoration:none;font-family:'Space Mono',monospace;font-size:13px;text-transform:uppercase">Spotify</a>
+      </div>
+    </div>
+    <div style="border-top:1px solid #2a2a28;padding-top:22px;font-family:'Space Mono',monospace;font-size:12px;color:#65605a">&copy; Donny Reiher Music &mdash; drums for all genres, angry or otherwise.</div>
+  </footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440},&quot;showMarquee&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Behavior&quot;},&quot;marqueeSpeed&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:22,&quot;min&quot;:10,&quot;max&quot;:45,&quot;step&quot;:1,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Behavior&quot;,&quot;unit&quot;:&quot;s&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      showMarquee: this.props.showMarquee ?? true,
+      marqueeSpeed: this.props.marqueeSpeed ?? 22,
+      services: [
+        { n: '01', title: 'Live', desc: 'Solid drums on stage, any genre, any city.' },
+        { n: '02', title: 'Studio', desc: 'Session tracking that hits like it should.' },
+        { n: '03', title: 'Tour', desc: 'Reliable, road-ready, easy to work with.' },
+        { n: '04', title: 'Lessons', desc: 'Online drum lessons, beginner to brutal.' },
+        { n: '05', title: 'Writing & MIDI', desc: 'Drum writing and full MIDI-packages.' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

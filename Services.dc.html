@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet>
+<style>
+@font-face{font-family:Arsenal;font-style:normal;font-weight:400;src:url('assets/fonts/arsenal-regular.woff2') format('woff2');font-display:swap;}
+@font-face{font-family:Arsenal;font-style:normal;font-weight:700;src:url('assets/fonts/arsenal-bold.woff2') format('woff2');font-display:swap;}
+@font-face{font-family:Archivo;font-style:normal;font-weight:100 900;src:url('assets/fonts/archivo_wght.woff2') format('woff2');font-display:swap;}
+@font-face{font-family:"IBM Plex Sans";font-style:normal;font-weight:400;src:url('assets/fonts/ibm-plex-sans-regular.woff2') format('woff2');font-display:swap;}
+@font-face{font-family:"IBM Plex Sans";font-style:normal;font-weight:700;src:url('assets/fonts/ibm-plex-sans-bold.woff2') format('woff2');font-display:swap;}
+@font-face{font-family:"Space Mono";font-style:normal;font-weight:400;src:url('assets/fonts/space-mono-regular.woff2') format('woff2');font-display:swap;}
+@font-face{font-family:"Space Mono";font-style:normal;font-weight:700;src:url('assets/fonts/space-mono-bold.woff2') format('woff2');font-display:swap;}
+body{margin:0;background:#0b0b0a;}
+@media (max-width:900px){
+  .drm-page-head{font-size:48px !important;}
+  .drm-nav{display:none !important;}
+  .drm-svc-grid{grid-template-columns:1fr !important;}
+}
+</style>
+</helmet>
+
+<div style="background:#0b0b0a;color:#f2ede4;font-family:'IBM Plex Sans',sans-serif;min-height:100vh;overflow-x:hidden">
+
+  <header style="display:flex;align-items:center;justify-content:space-between;padding:22px 48px;border-bottom:1px solid #2a2a28">
+    <a href="Donny%20Reiher%20Music.dc.html" style="display:flex;align-items:center;gap:14px;text-decoration:none;color:inherit">
+      <img src="assets/drm-logo.png" alt="DRM crest" style="height:46px;width:auto;filter:invert(1) brightness(1.6)"/>
+      <span style="font-family:Arsenal,serif;font-weight:700;font-size:20px;letter-spacing:0.06em;text-transform:uppercase">Donny Reiher</span>
+    </a>
+    <nav class="drm-nav" style="display:flex;gap:32px;font-family:'Space Mono',monospace;font-size:13px;letter-spacing:0.08em;text-transform:uppercase">
+      <a href="About.dc.html" style="color:#f2ede4;text-decoration:none">About</a>
+      <a href="Services.dc.html" style="color:#c81d2d;text-decoration:none">Services</a>
+      <a href="Terms.dc.html" style="color:#f2ede4;text-decoration:none">Terms</a>
+      <a href="Specs.dc.html" style="color:#f2ede4;text-decoration:none">Specs</a>
+      <a href="Contact.dc.html" style="color:#f2ede4;text-decoration:none">Contact</a>
+    </nav>
+  </header>
+
+  <section style="padding:90px 48px 30px;max-width:1300px;margin:0 auto">
+    <div style="display:inline-block;transform:rotate(-3deg);border:3px solid #c81d2d;color:#c81d2d;font-family:'Space Mono',monospace;font-size:13px;letter-spacing:0.15em;text-transform:uppercase;padding:5px 14px;margin-bottom:22px">What I can do for you</div>
+    <h1 class="drm-page-head" style="font-family:Arsenal,serif;font-weight:700;font-size:72px;line-height:0.98;margin:0 0 24px;text-transform:uppercase">Services on tap</h1>
+    <p style="font-family:'Space Mono',monospace;font-size:16px;color:#cfc9bd;max-width:620px;margin:0">No two gigs are the same, so no two quotes are either. Tell me what you need and I'll put a number on it.</p>
+  </section>
+
+  <section class="drm-svc-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:#2a2a28;max-width:1300px;margin:60px auto 0">
+    <sc-for list="{{ services }}" as="svc" hint-placeholder-count="5">
+      <div style="background:#141412;padding:40px 36px;display:flex;flex-direction:column;gap:14px">
+        <span style="font-family:Archivo,sans-serif;font-weight:800;font-size:40px;color:#c81d2d">{{ svc.n }}</span>
+        <span style="font-family:Arsenal,serif;font-weight:700;font-size:26px;text-transform:uppercase">{{ svc.title }}</span>
+        <span style="font-size:16px;line-height:1.6;color:#cfc9bd">{{ svc.desc }}</span>
+      </div>
+    </sc-for>
+  </section>
+
+  <section style="max-width:1300px;margin:0 auto;padding:70px 48px 110px">
+    <div style="border:3px solid #c81d2d;padding:36px 40px;transform:rotate(-1deg)">
+      <div style="font-family:'Space Mono',monospace;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:#c81d2d;margin-bottom:10px">Fine print, angrily worded</div>
+      <p style="font-family:Arsenal,serif;font-weight:700;font-size:26px;line-height:1.3;margin:0;text-transform:uppercase">Weird-genre discount available.</p>
+      <p style="font-size:16px;line-height:1.6;color:#cfc9bd;margin:12px 0 0">Playing outside metal? If it's a genre I haven't tried yet, ask about the discount &mdash; I want to learn it as much as you want it played.</p>
+    </div>
+  </section>
+
+  <section style="background:#c81d2d;padding:100px 48px;text-align:center">
+    <div style="max-width:700px;margin:0 auto">
+      <h2 style="font-family:Arsenal,serif;font-weight:700;font-size:44px;line-height:1;margin:0 0 22px;text-transform:uppercase;color:#0b0b0a">Ready to book?</h2>
+      <a href="Contact.dc.html" style="display:inline-block;background:#0b0b0a;color:#f2ede4;font-family:'Space Mono',monospace;font-weight:700;font-size:14px;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;padding:18px 34px">Get a quote &rarr;</a>
+    </div>
+  </section>
+
+  <footer style="padding:56px 48px 40px;display:flex;flex-direction:column;gap:28px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px">
+      <div style="display:flex;align-items:center;gap:14px">
+        <img src="assets/drm-logo.png" alt="DRM crest" style="height:34px;width:auto;filter:invert(1) brightness(1.6)"/>
+        <span style="font-family:Arsenal,serif;font-weight:700;font-size:16px;letter-spacing:0.06em;text-transform:uppercase">Donny Reiher Music</span>
+      </div>
+      <div style="display:flex;gap:26px">
+        <a href="https://www.instagram.com/heavymetalhausfrau/" style="color:#a8a196;text-decoration:none;font-family:'Space Mono',monospace;font-size:13px;text-transform:uppercase">Instagram</a>
+        <a href="https://www.youtube.com/@heavymetalhausfrau" style="color:#a8a196;text-decoration:none;font-family:'Space Mono',monospace;font-size:13px;text-transform:uppercase">YouTube</a>
+        <a href="https://open.spotify.com/artist/4KXXP4WTgnzQQQgv77cagF" style="color:#a8a196;text-decoration:none;font-family:'Space Mono',monospace;font-size:13px;text-transform:uppercase">Spotify</a>
+      </div>
+    </div>
+    <div style="border-top:1px solid #2a2a28;padding-top:22px;font-family:'Space Mono',monospace;font-size:12px;color:#65605a">&copy; Donny Reiher Music &mdash; drums for all genres, angry or otherwise.</div>
+  </footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      services: [
+        { n: '01', title: 'Live', desc: 'Solid drums on stage, any genre, any city. Rehearsal-ready and easy to work with on tight turnarounds.' },
+        { n: '02', title: 'Studio', desc: 'Session tracking for records and demos, with input on arrangement and feel when you want it.' },
+        { n: '03', title: 'Tour', desc: 'Reliable on the road: own gear, own transport options, and a drummer who shows up on time.' },
+        { n: '04', title: 'Lessons', desc: 'Online drum lessons for any level, from first paradiddle to blast-beat control.' },
+        { n: '05', title: 'Writing & MIDI', desc: 'Drum writing and full MIDI-packages for bands who need studio-tight drums without booking a studio.' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

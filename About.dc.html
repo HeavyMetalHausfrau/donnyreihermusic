@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet>
+<style>
+@font-face{font-family:Arsenal;font-style:normal;font-weight:400;src:url('assets/fonts/arsenal-regular.woff2') format('woff2');font-display:swap;}
+@font-face{font-family:Arsenal;font-style:normal;font-weight:700;src:url('assets/fonts/arsenal-bold.woff2') format('woff2');font-display:swap;}
+@font-face{font-family:Archivo;font-style:normal;font-weight:100 900;src:url('assets/fonts/archivo_wght.woff2') format('woff2');font-display:swap;}
+@font-face{font-family:"IBM Plex Sans";font-style:normal;font-weight:400;src:url('assets/fonts/ibm-plex-sans-regular.woff2') format('woff2');font-display:swap;}
+@font-face{font-family:"IBM Plex Sans";font-style:normal;font-weight:700;src:url('assets/fonts/ibm-plex-sans-bold.woff2') format('woff2');font-display:swap;}
+@font-face{font-family:"Space Mono";font-style:normal;font-weight:400;src:url('assets/fonts/space-mono-regular.woff2') format('woff2');font-display:swap;}
+@font-face{font-family:"Space Mono";font-style:normal;font-weight:700;src:url('assets/fonts/space-mono-bold.woff2') format('woff2');font-display:swap;}
+body{margin:0;background:#0b0b0a;}
+@media (max-width:900px){
+  .drm-page-head{font-size:48px !important;}
+  .drm-about-grid{grid-template-columns:1fr !important;}
+  .drm-nav{display:none !important;}
+  .drm-stats{flex-wrap:wrap !important;}
+}
+</style>
+</helmet>
+
+<div style="background:#0b0b0a;color:#f2ede4;font-family:'IBM Plex Sans',sans-serif;min-height:100vh;overflow-x:hidden">
+
+  <header style="display:flex;align-items:center;justify-content:space-between;padding:22px 48px;border-bottom:1px solid #2a2a28">
+    <div style="display:flex;align-items:center;gap:14px">
+      <a href="Donny%20Reiher%20Music.dc.html" style="display:flex;align-items:center;gap:14px;text-decoration:none;color:inherit">
+        <img src="assets/drm-logo.png" alt="DRM crest" style="height:46px;width:auto;filter:invert(1) brightness(1.6)"/>
+        <span style="font-family:Arsenal,serif;font-weight:700;font-size:20px;letter-spacing:0.06em;text-transform:uppercase">Donny Reiher</span>
+      </a>
+    </div>
+    <nav class="drm-nav" style="display:flex;gap:32px;font-family:'Space Mono',monospace;font-size:13px;letter-spacing:0.08em;text-transform:uppercase">
+      <a href="About.dc.html" style="color:#c81d2d;text-decoration:none">About</a>
+      <a href="Services.dc.html" style="color:#f2ede4;text-decoration:none">Services</a>
+      <a href="Terms.dc.html" style="color:#f2ede4;text-decoration:none">Terms</a>
+      <a href="Specs.dc.html" style="color:#f2ede4;text-decoration:none">Specs</a>
+      <a href="Contact.dc.html" style="color:#f2ede4;text-decoration:none">Contact</a>
+    </nav>
+  </header>
+
+  <section style="padding:90px 48px 30px;max-width:1300px;margin:0 auto">
+    <div style="display:inline-block;transform:rotate(-3deg);border:3px solid #c81d2d;color:#c81d2d;font-family:'Space Mono',monospace;font-size:13px;letter-spacing:0.15em;text-transform:uppercase;padding:5px 14px;margin-bottom:22px">The story</div>
+    <h1 class="drm-page-head" style="font-family:Arsenal,serif;font-weight:700;font-size:72px;line-height:0.98;margin:0;text-transform:uppercase;text-wrap:pretty">Behind the kit</h1>
+  </section>
+
+  <section class="drm-about-grid" style="display:grid;grid-template-columns:0.85fr 1.15fr;gap:64px;padding:50px 48px 110px;max-width:1300px;margin:0 auto;align-items:center">
+    <div style="position:relative">
+      <img src="assets/hero-drums.jpg" alt="Donny Reiher drumming live under blue stage light" style="width:100%;display:block;object-fit:cover;aspect-ratio:1/1;clip-path:polygon(0 0,100% 3%,97% 100%,3% 97%)"/>
+      <div style="position:absolute;bottom:-18px;right:-18px;background:#c81d2d;color:#0b0b0a;font-family:'Space Mono',monospace;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:0.08em;padding:10px 16px;transform:rotate(-4deg)">Sticks up, always</div>
+    </div>
+    <div>
+      <p style="font-size:18px;line-height:1.65;color:#e7e1d5;margin:0 0 20px">I'm Donny, and drumming is the one thing I refuse to do halfway. Whatever's behind the kit &mdash; a club stage, a tour van, a home studio, a student's first paradiddle &mdash; I bring the same relentless drive.</p>
+      <p style="font-size:18px;line-height:1.65;color:#e7e1d5;margin:0 0 20px">Metal is home base: blast beats, breakdowns, and the kind of pocket that makes a room move. But I'm always chasing new ground &mdash; if your genre is weird, unusual, or just plain hard to categorize, I want in.</p>
+      <p style="font-size:18px;line-height:1.65;color:#e7e1d5;margin:0">Beyond playing live, I write and program drum parts and full MIDI-packages for bands who need studio-tight drums without booking a studio, and I teach lessons for anyone who wants to hit as hard (and as accurately) as I do.</p>
+    </div>
+  </section>
+
+  <section style="border-top:1px solid #2a2a28;border-bottom:1px solid #2a2a28;background:#141412">
+    <div class="drm-stats" style="display:flex;max-width:1300px;margin:0 auto">
+      <div style="flex:1;padding:44px 32px;border-right:1px solid #2a2a28">
+        <div style="font-family:Archivo,sans-serif;font-weight:800;font-size:48px;color:#c81d2d">10+</div>
+        <div style="font-family:'Space Mono',monospace;font-size:13px;text-transform:uppercase;letter-spacing:0.08em;color:#a8a196;margin-top:8px">Bands worked with</div>
+      </div>
+      <div style="flex:1;padding:44px 32px;border-right:1px solid #2a2a28">
+        <div style="font-family:Archivo,sans-serif;font-weight:800;font-size:48px;color:#c81d2d">3</div>
+        <div style="font-family:'Space Mono',monospace;font-size:13px;text-transform:uppercase;letter-spacing:0.08em;color:#a8a196;margin-top:8px">Active bands right now</div>
+      </div>
+      <div style="flex:1;padding:44px 32px">
+        <div style="font-family:Archivo,sans-serif;font-weight:800;font-size:48px;color:#c81d2d">&infin;</div>
+        <div style="font-family:'Space Mono',monospace;font-size:13px;text-transform:uppercase;letter-spacing:0.08em;color:#a8a196;margin-top:8px">Genres I'll try</div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#c81d2d;padding:100px 48px;text-align:center">
+    <div style="max-width:700px;margin:0 auto">
+      <h2 style="font-family:Arsenal,serif;font-weight:700;font-size:44px;line-height:1;margin:0 0 22px;text-transform:uppercase;color:#0b0b0a">Want me on your record or your stage?</h2>
+      <a href="Contact.dc.html" style="display:inline-block;background:#0b0b0a;color:#f2ede4;font-family:'Space Mono',monospace;font-weight:700;font-size:14px;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;padding:18px 34px">Get in touch &rarr;</a>
+    </div>
+  </section>
+
+  <footer style="padding:56px 48px 40px;display:flex;flex-direction:column;gap:28px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px">
+      <div style="display:flex;align-items:center;gap:14px">
+        <img src="assets/drm-logo.png" alt="DRM crest" style="height:34px;width:auto;filter:invert(1) brightness(1.6)"/>
+        <span style="font-family:Arsenal,serif;font-weight:700;font-size:16px;letter-spacing:0.06em;text-transform:uppercase">Donny Reiher Music</span>
+      </div>
+      <div style="display:flex;gap:26px">
+        <a href="https://www.instagram.com/heavymetalhausfrau/" style="color:#a8a196;text-decoration:none;font-family:'Space Mono',monospace;font-size:13px;text-transform:uppercase">Instagram</a>
+        <a href="https://www.youtube.com/@heavymetalhausfrau" style="color:#a8a196;text-decoration:none;font-family:'Space Mono',monospace;font-size:13px;text-transform:uppercase">YouTube</a>
+        <a href="https://open.spotify.com/artist/4KXXP4WTgnzQQQgv77cagF" style="color:#a8a196;text-decoration:none;font-family:'Space Mono',monospace;font-size:13px;text-transform:uppercase">Spotify</a>
+      </div>
+    </div>
+    <div style="border-top:1px solid #2a2a28;padding-top:22px;font-family:'Space Mono',monospace;font-size:12px;color:#65605a">&copy; Donny Reiher Music &mdash; drums for all genres, angry or otherwise.</div>
+  </footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440}}"></script>
+</body>
+</html>
