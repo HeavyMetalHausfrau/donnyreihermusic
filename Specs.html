@@ -33,34 +33,45 @@ body{margin:0;background:#0b0b0a;}
       <span style="font-family:Arsenal,serif;font-weight:700;font-size:20px;letter-spacing:0.06em;text-transform:uppercase">Donny Reiher</span>
     </a>
     <nav class="drm-nav" style="display:flex;gap:32px;font-family:'Space Mono',monospace;font-size:13px;letter-spacing:0.08em;text-transform:uppercase">
-      <a href="About.dc.html" style="color:#f2ede4;text-decoration:none">About</a>
-      <a href="Services.dc.html" style="color:#f2ede4;text-decoration:none">Services</a>
-      <a href="Terms.dc.html" style="color:#c81d2d;text-decoration:none">Terms</a>
-      <a href="Specs.dc.html" style="color:#f2ede4;text-decoration:none">Specs</a>
-      <a href="Contact.dc.html" style="color:#f2ede4;text-decoration:none">Contact</a>
+      <a href="About.html" style="color:#f2ede4;text-decoration:none">About</a>
+      <a href="Services.html" style="color:#f2ede4;text-decoration:none">Services</a>
+      <a href="Terms.html" style="color:#f2ede4;text-decoration:none">Terms</a>
+      <a href="Specs.html" style="color:#c81d2d;text-decoration:none">Specs</a>
+      <a href="Contact.html" style="color:#f2ede4;text-decoration:none">Contact</a>
     </nav>
   </header>
 
-  <section style="padding:90px 48px 30px;max-width:1000px;margin:0 auto">
-    <div style="display:inline-block;transform:rotate(-3deg);border:3px solid #c81d2d;color:#c81d2d;font-family:'Space Mono',monospace;font-size:13px;letter-spacing:0.15em;text-transform:uppercase;padding:5px 14px;margin-bottom:22px">The fine print</div>
-    <h1 class="drm-page-head" style="font-family:Arsenal,serif;font-weight:700;font-size:64px;line-height:0.98;margin:0 0 20px;text-transform:uppercase">Booking terms</h1>
-    <p style="font-family:'Space Mono',monospace;font-size:15px;color:#cfc9bd;margin:0">Nothing scary here &mdash; just the basics so we're both covered.</p>
+  <section style="padding:90px 48px 30px;max-width:1300px;margin:0 auto">
+    <div style="display:inline-block;transform:rotate(-3deg);border:3px solid #c81d2d;color:#c81d2d;font-family:'Space Mono',monospace;font-size:13px;letter-spacing:0.15em;text-transform:uppercase;padding:5px 14px;margin-bottom:22px">Gear &amp; specs</div>
+    <h1 class="drm-page-head" style="font-family:Arsenal,serif;font-weight:700;font-size:72px;line-height:0.98;margin:0;text-transform:uppercase">What I play</h1>
   </section>
 
-  <section style="max-width:1000px;margin:50px auto 110px;padding:0 48px">
-    <sc-for list="{{ terms }}" as="t" hint-placeholder-count="6">
-      <div style="border-top:1px solid #2a2a28;padding:30px 0">
-        <h3 style="font-family:Arsenal,serif;font-weight:700;font-size:22px;text-transform:uppercase;margin:0 0 10px">{{ t.title }}</h3>
-        <p style="font-size:16px;line-height:1.7;color:#cfc9bd;margin:0">{{ t.body }}</p>
+  <section style="max-width:1100px;margin:60px auto 0;padding:0 48px">
+    <sc-for list="{{ specGroups }}" as="grp" hint-placeholder-count="4">
+      <div style="border-top:1px solid #2a2a28;padding:32px 0">
+        <div style="display:flex;gap:32px;align-items:baseline;flex-wrap:wrap">
+          <div style="font-family:Arsenal,serif;font-weight:700;font-size:24px;text-transform:uppercase;min-width:180px">{{ grp.label }}</div>
+          <div style="font-family:'Space Mono',monospace;font-size:16px;color:#cfc9bd;line-height:1.8">{{ grp.value }}</div>
+        </div>
       </div>
     </sc-for>
-    <div style="border-top:1px solid #2a2a28"></div>
+    <div style="border-top:1px solid #2a2a28;border-bottom:1px solid #2a2a28"></div>
+  </section>
+
+  <section style="max-width:1100px;margin:70px auto 110px;padding:0 48px;display:flex;align-items:center;gap:48px;flex-wrap:wrap">
+    <div style="background:#f2ede4;padding:30px 36px;transform:rotate(2deg)">
+      <img src="assets/czarcie-logo.png" alt="Czarcie Kopyto Custom Drum Pedals logo" style="width:180px;display:block"/>
+    </div>
+    <div style="max-width:520px">
+      <p style="font-family:Arsenal,serif;font-weight:700;font-size:22px;line-height:1.3;margin:0 0 10px;text-transform:uppercase">Happily and proudly using Czarcie Kopyto Custom Drum Pedals</p>
+      <a href="https://www.czarciekopyto.com/artist/donny-reiher/" style="font-family:'Space Mono',monospace;font-size:14px;color:#c81d2d;text-decoration:underline">View the artist page &rarr;</a>
+    </div>
   </section>
 
   <section style="background:#c81d2d;padding:100px 48px;text-align:center">
     <div style="max-width:700px;margin:0 auto">
-      <h2 style="font-family:Arsenal,serif;font-weight:700;font-size:40px;line-height:1.1;margin:0 0 22px;text-transform:uppercase;color:#0b0b0a">Got a question before booking?</h2>
-      <a href="Contact.dc.html" style="display:inline-block;background:#0b0b0a;color:#f2ede4;font-family:'Space Mono',monospace;font-weight:700;font-size:14px;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;padding:18px 34px">Ask before you book &rarr;</a>
+      <h2 style="font-family:Arsenal,serif;font-weight:700;font-size:44px;line-height:1;margin:0 0 22px;text-transform:uppercase;color:#0b0b0a">Questions about the setup?</h2>
+      <a href="Contact.html" style="display:inline-block;background:#0b0b0a;color:#f2ede4;font-family:'Space Mono',monospace;font-weight:700;font-size:14px;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;padding:18px 34px">Ask away &rarr;</a>
     </div>
   </section>
 
@@ -86,13 +97,11 @@ body{margin:0;background:#0b0b0a;}
 class Component extends DCLogic {
   renderVals() {
     return {
-      terms: [
-        { title: 'Booking & deposit', body: 'A deposit secures your date. The remaining balance is due on the day of the gig or session unless we agree otherwise in writing.' },
-        { title: 'Cancellation', body: 'Cancel more than 14 days out and your deposit rolls over to a future date. Inside 14 days, the deposit is non-refundable \u2014 gear and prep time is already committed.' },
-        { title: 'Travel & lodging', body: 'Local travel is included. For anything requiring an overnight stay or long-distance travel, reasonable expenses are added to the quote up front.' },
-        { title: 'Gear', body: 'I bring my own kit, cymbals, pedals, and sticks. If the venue or studio needs something specific, let me know ahead of time.' },
-        { title: 'Recording & media', body: 'Any live or studio recordings I appear on may be used in my own portfolio and socials, credited to the project, unless we agree otherwise.' },
-        { title: 'Lessons', body: 'Lesson packages are billed per session or per block. Missed sessions with less than 24 hours notice are charged in full.' }
+      specGroups: [
+        { label: 'Kit', value: 'Pearl drum kit, road-cased and gig-ready.' },
+        { label: 'Cymbals', value: 'Paiste cymbal set, full range from hats to crashes.' },
+        { label: 'Pedals', value: 'Czarcie Kopyto Custom Drum Pedals.' },
+        { label: 'Everything else', value: 'Sticks, heads, and hardware supplied \u2014 just tell me the room.' }
       ]
     };
   }

@@ -36,11 +36,11 @@ input::placeholder,textarea::placeholder{color:#75706a;}
       <span style="font-family:Arsenal,serif;font-weight:700;font-size:20px;letter-spacing:0.06em;text-transform:uppercase">Donny Reiher</span>
     </a>
     <nav class="drm-nav" style="display:flex;gap:32px;font-family:'Space Mono',monospace;font-size:13px;letter-spacing:0.08em;text-transform:uppercase">
-      <a href="About.dc.html" style="color:#f2ede4;text-decoration:none">About</a>
-      <a href="Services.dc.html" style="color:#f2ede4;text-decoration:none">Services</a>
-      <a href="Terms.dc.html" style="color:#f2ede4;text-decoration:none">Terms</a>
-      <a href="Specs.dc.html" style="color:#f2ede4;text-decoration:none">Specs</a>
-      <a href="Contact.dc.html" style="color:#c81d2d;text-decoration:none">Contact</a>
+      <a href="About.html" style="color:#f2ede4;text-decoration:none">About</a>
+      <a href="Services.html" style="color:#f2ede4;text-decoration:none">Services</a>
+      <a href="Terms.html" style="color:#f2ede4;text-decoration:none">Terms</a>
+      <a href="Specs.html" style="color:#f2ede4;text-decoration:none">Specs</a>
+      <a href="Contact.html" style="color:#c81d2d;text-decoration:none">Contact</a>
     </nav>
   </header>
 
@@ -60,23 +60,99 @@ input::placeholder,textarea::placeholder{color:#75706a;}
     </div>
     <div style="background:#141412;padding:44px;border:1px solid #2a2a28">
       <div style="display:flex;flex-direction:column;gap:20px">
-        <div style="display:flex;flex-direction:column;gap:8px">
-          <label style="font-family:'Space Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:0.08em;color:#a8a196">Name</label>
-          <input type="text" placeholder="Your name" style="background:#0b0b0a;border:1px solid #2a2a28;color:#f2ede4;padding:14px 16px;font-size:15px"/>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:8px">
-          <label style="font-family:'Space Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:0.08em;color:#a8a196">Email</label>
-          <input type="email" placeholder="you@band.com" style="background:#0b0b0a;border:1px solid #2a2a28;color:#f2ede4;padding:14px 16px;font-size:15px"/>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:8px">
-          <label style="font-family:'Space Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:0.08em;color:#a8a196">What do you need?</label>
-          <input type="text" placeholder="Live show, studio session, lessons..." style="background:#0b0b0a;border:1px solid #2a2a28;color:#f2ede4;padding:14px 16px;font-size:15px"/>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:8px">
-          <label style="font-family:'Space Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:0.08em;color:#a8a196">Message</label>
-          <textarea placeholder="Tell me about the gig, the genre, the dates..." rows="5" style="background:#0b0b0a;border:1px solid #2a2a28;color:#f2ede4;padding:14px 16px;font-size:15px;resize:vertical"></textarea>
-        </div>
-        <button style="background:#c81d2d;color:#0b0b0a;border:none;font-family:'Space Mono',monospace;font-weight:700;font-size:14px;letter-spacing:0.1em;text-transform:uppercase;padding:16px 30px;cursor:pointer;margin-top:8px">Send it &rarr;</button>
+
+        <form
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          style="display:flex;flex-direction:column;gap:20px"
+        >
+          <!-- Keep your existing Web3Forms access key here -->
+          <input
+            type="hidden"
+            name="access_key"
+            value="YOUR_EXISTING_WEB3FORMS_ACCESS_KEY"
+          >
+
+          <!-- This controls the email subject you receive -->
+          <input
+            type="hidden"
+            name="subject"
+            value="New message from donnyreihermusic.com"
+          >
+
+          <!-- Invisible anti-spam field: leave it unchanged -->
+          <input
+            type="checkbox"
+            name="botcheck"
+            tabindex="-1"
+            autocomplete="off"
+            style="display:none"
+          >
+
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <label
+              for="name"
+              style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#a8a196"
+            >
+              Name
+            </label>
+
+            <input
+              id="name"
+              type="text"
+              name="name"
+              required
+              placeholder="Your name"
+              style="background:#0b0b0a;color:#f2ede4;border:1px solid #3a3a37;padding:14px 16px;font-size:16px;outline:none"
+            >
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <label
+              for="email"
+              style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#a8a196"
+            >
+              Email
+            </label>
+
+            <input
+              id="email"
+              type="email"
+              name="email"
+              required
+              placeholder="you@email.com"
+              style="background:#0b0b0a;color:#f2ede4;border:1px solid #3a3a37;padding:14px 16px;font-size:16px;outline:none"
+            >
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <label
+              for="message"
+              style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#a8a196"
+            >
+              Message
+            </label>
+
+            <textarea
+              id="message"
+              name="message"
+              required
+              rows="6"
+              placeholder="What can I do for you?"
+              style="background:#0b0b0a;color:#f2ede4;border:1px solid #3a3a37;padding:14px 16px;font-size:16px;line-height:1.5;resize:vertical;outline:none"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            style="background:#c81d2d;color:#0b0b0a;border:none;font-family:'Space Mono',monospace;font-weight:700;font-size:14px;letter-spacing:0.1em;text-transform:uppercase;padding:16px 30px;cursor:pointer;margin-top:8px;align-self:flex-start"
+          >
+            Send it &rarr;
+          </button>
+        </form>
+
+
+
       </div>
     </div>
   </section>
