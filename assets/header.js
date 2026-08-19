@@ -24,8 +24,8 @@ class SiteHeader extends HTMLElement {
       border-bottom:1px solid #2a2a28">
         <a href="/index.html" style="display:flex;align-items:center;gap:14px;text-decoration:none;color:inherit">
           <img src="/assets/drm-logo.png" alt="DRM crest" style="height:46px;width:auto">
-          <span style="font-family:Arsenal,serif;font-weight:700;font-size:20px;letter-spacing:0.06em;text-transform:uppercase">
-            Donny Reiher
+          <span style="font-family:Arsenal,serif;color:#f2ede4;font-weight:700;font-size:20px;letter-spacing:0.06em;text-transform:uppercase">
+            Donny Reiher Music
           </span>
         </a>
 
