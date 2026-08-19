@@ -27,23 +27,13 @@ body{margin:0;background:#0b0b0a;}
 
 <div style="background:#0b0b0a;color:#f2ede4;font-family:'IBM Plex Sans',sans-serif;min-height:100vh;overflow-x:hidden">
 
-  <header style="display:flex;align-items:center;justify-content:space-between;padding:22px 48px;border-bottom:1px solid #2a2a28">
-    <a href="index.html" style="display:flex;align-items:center;gap:14px;text-decoration:none;color:inherit">
-      <img src="assets/drm-logo.png" alt="DRM crest" style="height:46px;width:auto;filter:invert(1) brightness(1.6)"/>
-      <span style="font-family:Arsenal,serif;font-weight:700;font-size:20px;letter-spacing:0.06em;text-transform:uppercase">Donny Reiher</span>
-    </a>
-    <nav class="drm-nav" style="display:flex;gap:32px;font-family:'Space Mono',monospace;font-size:13px;letter-spacing:0.08em;text-transform:uppercase">
-      <a href="About.html" style="color:#f2ede4;text-decoration:none">About</a>
-      <a href="Services.html" style="color:#f2ede4;text-decoration:none">Services</a>
-      <a href="Terms.html" style="color:#f2ede4;text-decoration:none">Terms</a>
-      <a href="Specs.html" style="color:#c81d2d;text-decoration:none">Specs</a>
-      <a href="Contact.html" style="color:#f2ede4;text-decoration:none">Contact</a>
-    </nav>
-  </header>
+  <site-header></site-header>
+
+  <script src="/assets/header.js"></script>
 
   <section style="padding:90px 48px 30px;max-width:1300px;margin:0 auto">
     <div style="display:inline-block;transform:rotate(-3deg);border:3px solid #c81d2d;color:#c81d2d;font-family:'Space Mono',monospace;font-size:13px;letter-spacing:0.15em;text-transform:uppercase;padding:5px 14px;margin-bottom:22px">Gear &amp; specs</div>
-    <h1 class="drm-page-head" style="font-family:Arsenal,serif;font-weight:700;font-size:72px;line-height:0.98;margin:0;text-transform:uppercase">What I play</h1>
+    <h1 class="drm-page-head" style="font-family:Arsenal,serif;font-weight:700;font-size:72px;line-height:0.98;margin:0;text-transform:uppercase">What I bring</h1>
   </section>
 
   <section style="max-width:1100px;margin:60px auto 0;padding:0 48px">
@@ -51,7 +41,7 @@ body{margin:0;background:#0b0b0a;}
       <div style="border-top:1px solid #2a2a28;padding:32px 0">
         <div style="display:flex;gap:32px;align-items:baseline;flex-wrap:wrap">
           <div style="font-family:Arsenal,serif;font-weight:700;font-size:24px;text-transform:uppercase;min-width:180px">{{ grp.label }}</div>
-          <div style="font-family:'Space Mono',monospace;font-size:16px;color:#cfc9bd;line-height:1.8">{{ grp.value }}</div>
+          <div style="font-family:'Space Mono',monospace;font-size:16px;color:#cfc9bd;line-height:1.8;white-space:pre-line">{{ grp.value }}</div>
         </div>
       </div>
     </sc-for>
@@ -59,7 +49,7 @@ body{margin:0;background:#0b0b0a;}
   </section>
 
   <section style="max-width:1100px;margin:70px auto 110px;padding:0 48px;display:flex;align-items:center;gap:48px;flex-wrap:wrap">
-    <div style="background:#f2ede4;padding:30px 36px;transform:rotate(2deg)">
+    <div style="padding:30px 36px">
       <img src="assets/czarcie-logo.png" alt="Czarcie Kopyto Custom Drum Pedals logo" style="width:180px;display:block"/>
     </div>
     <div style="max-width:520px">
@@ -83,7 +73,7 @@ body{margin:0;background:#0b0b0a;}
       </div>
       <div style="display:flex;gap:26px">
         <a href="https://www.instagram.com/heavymetalhausfrau/" style="color:#a8a196;text-decoration:none;font-family:'Space Mono',monospace;font-size:13px;text-transform:uppercase">Instagram</a>
-        <a href="https://www.youtube.com/@heavymetalhausfrau" style="color:#a8a196;text-decoration:none;font-family:'Space Mono',monospace;font-size:13px;text-transform:uppercase">YouTube</a>
+        <a href="https://www.youtube.com/@donnyreiher" style="color:#a8a196;text-decoration:none;font-family:'Space Mono',monospace;font-size:13px;text-transform:uppercase">YouTube</a>
         <a href="https://open.spotify.com/artist/4KXXP4WTgnzQQQgv77cagF" style="color:#a8a196;text-decoration:none;font-family:'Space Mono',monospace;font-size:13px;text-transform:uppercase">Spotify</a>
       </div>
     </div>
@@ -98,10 +88,9 @@ class Component extends DCLogic {
   renderVals() {
     return {
       specGroups: [
-        { label: 'Kit', value: 'Pearl drum kit, road-cased and gig-ready.' },
-        { label: 'Cymbals', value: 'Paiste cymbal set, full range from hats to crashes.' },
-        { label: 'Pedals', value: 'Czarcie Kopyto Custom Drum Pedals.' },
-        { label: 'Everything else', value: 'Sticks, heads, and hardware supplied \u2014 just tell me the room.' }
+        { label: 'Fully equipped', value: "Always able to bring a complete drum backline. Tama Starclassic kit, more hardware than needed, and a variety of snares and china's to suit to your needs."},
+        { label: 'IEM-ready', value: "Using IEM? Great, just give me an XLR/Jack. \nNo IEM? No prob (but it's gonna be faster)." },
+        { label: 'Need something extra?', value: "Need a mixer? PA set? Coffee machine? Ask me, and I might be able to help through some of my partners." },
       ]
     };
   }
