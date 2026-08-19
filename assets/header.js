@@ -34,7 +34,7 @@ class SiteHeader extends HTMLElement {
           <a href="/Services.html" style="color:#f2ede4;text-decoration:none">Services</a>
           <a href="/Lessons.html" style="color:#f2ede4;text-decoration:none">Lessons</a>
           <a href="/Specs.html" style="color:#f2ede4;text-decoration:none">Specs</a>
-          <a href="/Terms.html" style="color:#c81d2d;text-decoration:none">Terms</a>
+          <a href="/Terms.html" style="color:#f2ede4;text-decoration:none">Terms</a>
           <a href="/Contact.html" style="color:#f2ede4;text-decoration:none">Contact</a>
         </nav>
       </header>
